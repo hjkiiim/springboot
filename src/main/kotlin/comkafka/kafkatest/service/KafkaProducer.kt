@@ -14,6 +14,6 @@ class KafkaProducer {
 
     fun send(message: String, kafkaTemplate: KafkaTemplate<String, String>){
         this.kafkaTemplate = kafkaTemplate
-        this.kafkaTemplate.send("message", message)
+        this.kafkaTemplate.send("inbound", message)
     }
 }

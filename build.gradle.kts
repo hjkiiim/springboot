@@ -31,7 +31,7 @@ dependencies {
 
 	implementation("org.springframework.integration:spring-integration:6.0.2")
 	implementation("org.apache.tomcat.embed:tomcat-embed-jasper:10.1.4")
-	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.kafka:spring-kafka-test")
 }

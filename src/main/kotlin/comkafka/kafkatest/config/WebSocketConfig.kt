@@ -5,13 +5,10 @@ import org.springframework.messaging.simp.config.MessageBrokerRegistry
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer
-import org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor
 
 @Configuration
 @EnableWebSocketMessageBroker
 class WebSocketConfig : WebSocketMessageBrokerConfigurer{
-
-    private val httpHandshakeInterceptor: HttpSessionHandshakeInterceptor? = null
 
     @Override
     override fun configureMessageBroker(config: MessageBrokerRegistry){
@@ -21,6 +18,7 @@ class WebSocketConfig : WebSocketMessageBrokerConfigurer{
 
     @Override
     override fun registerStompEndpoints(registry: StompEndpointRegistry) {
-        registry.addEndpoint("/websocket").setAllowedOrigins("*").withSockJS()
+//        subscribe 과정에서 오류 발생할 수 있으므로, setAllowedOriginPatterns("*") 사용하면 정상적으로 Subscribe됨.
+        registry.addEndpoint("/websocket").setAllowedOriginPatterns("*").withSockJS()
     }
 }

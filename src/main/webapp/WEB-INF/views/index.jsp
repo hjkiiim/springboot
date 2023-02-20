@@ -9,8 +9,9 @@
 <body>
 <div id="wrap">
 </div>
-<script src="${pageContext.request.contextPath}/js/index.js" defer></script>
-<script src="${pageContext.request.contextPath}/js/jquery.min.js" defer></script>
+<script src="js/index.js" defer></script>
+<script src="js/jquery.min.js" defer></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 </body>
